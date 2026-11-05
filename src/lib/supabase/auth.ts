@@ -10,7 +10,7 @@ import { createClient } from './server';
  * Returns: { isAdmin: boolean, user: User | null, error?: string }
  */
 export async function verifyAdminSession() {
-  const adminEmail = (process.env.ADMIN_EMAIL || 'connect.haneen@gmail.com').trim().toLowerCase();
+  const adminEmail = (process.env.ADMIN_EMAIL || 'amjadamjadkondeth@gmail.com').trim().toLowerCase();
 
   try {
     const supabase = await createClient();

@@ -72,7 +72,7 @@ export const ContactSection: React.FC = () => {
           </h2>
 
           <p className="text-slate-700 text-lg sm:text-2xl font-bold bg-white p-4 border-b-8 border-r-8 border-t-4 border-l-4 border-slate-900 shadow-[6px_6px_0px_0px_rgba(245,158,11,1)] inline-block -rotate-1">
-            Whether you have an upcoming project, freelance engagement, or job opportunity, my inbox is always open.
+            Whether you have an upcoming project, collaboration, or job opportunity, my inbox is always open.
           </p>
         </div>
 
@@ -127,7 +127,7 @@ export const ContactSection: React.FC = () => {
                     Phone & WhatsApp
                   </div>
                   <a
-                    href="https://wa.me/918547896740"
+                    href="https://wa.me/917994767824"
                     target="_blank"
                     rel="noreferrer"
                     className="text-base sm:text-xl font-black text-slate-900 hover:text-emerald-600 transition-colors block mt-1"

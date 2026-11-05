@@ -129,7 +129,7 @@ export default function AdminLoginPage() {
             <input
               type="email"
               required
-              placeholder="e.g. connect.haneen@gmail.com"
+              placeholder="e.g. amjadamjadkondeth@gmail.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="w-full px-4 py-3 bg-slate-50 border-3 border-slate-900 font-bold text-slate-900 placeholder:text-slate-400 focus:outline-none focus:bg-white shadow-[3px_3px_0px_0px_rgba(15,23,42,1)] text-sm"
@@ -147,7 +147,7 @@ export default function AdminLoginPage() {
               <button
                 type="button"
                 onClick={() => {
-                  setResetEmail(email || 'connect.haneen@gmail.com');
+                  setResetEmail(email || 'amjadamjadkondeth@gmail.com');
                   setResetStatus(null);
                   setIsForgotModalOpen(true);
                 }}
@@ -262,7 +262,7 @@ export default function AdminLoginPage() {
                 <input
                   type="email"
                   required
-                  placeholder="connect.haneen@gmail.com"
+                  placeholder="amjadamjadkondeth@gmail.com"
                   value={resetEmail}
                   onChange={(e) => setResetEmail(e.target.value)}
                   className="w-full px-4 py-2.5 bg-slate-50 border-3 border-slate-900 font-bold text-slate-900 text-sm focus:outline-none focus:bg-white shadow-[2px_2px_0px_0px_rgba(15,23,42,1)]"

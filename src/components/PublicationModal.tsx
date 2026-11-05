@@ -46,7 +46,7 @@ export const PublicationModal: React.FC<PublicationModalProps> = ({
         <div className="space-y-4 pr-12">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-amber-100 border-2 border-slate-900 text-slate-900 font-black uppercase tracking-widest text-xs shadow-[2px_2px_0px_0px_rgba(15,23,42,1)]">
             <BookOpen className="w-4 h-4" />
-            <span>Academic Research Paper</span>
+            <span>Professional Experience</span>
           </div>
 
           <h3 className="text-3xl sm:text-5xl font-black text-slate-900 uppercase tracking-tight leading-none">
@@ -70,50 +70,50 @@ export const PublicationModal: React.FC<PublicationModalProps> = ({
               Research Abstract & Purpose
             </h4>
             <p className="text-sm font-bold text-slate-800 leading-relaxed bg-slate-50 p-4 border-2 border-slate-200">
-              This paper introduces an integrated clinic and pharmacy management ecosystem utilizing machine learning algorithms to assist medical practitioners during prescription drafting, preventing contraindicated drug combinations and predicting clinic inventory deficits before stock runs dry.
+              Developed a CCTV-based employee attendance system at Zoople Technologies (Calicut) to automate attendance recording through real-time camera monitoring, eliminating the need for manual employee check-in and significantly reducing administrative overhead.
             </p>
           </div>
 
           <div>
             <h4 className="text-xs font-black uppercase tracking-widest text-pink-500 mb-3">
-              Core Technical Contributions
+              Key Technical Responsibilities
             </h4>
             <ul className="space-y-3 text-sm font-bold text-slate-800">
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
                 <span>
-                  <strong className="text-slate-900">AI Prescription Assistant:</strong> Real-time drug-allergy checking and automated dosage recommendation based on patient vitals.
+                  <strong className="text-slate-900">CCTV Integration:</strong> Real-time camera feed processing to detect and identify employees entering or leaving the premises.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
                 <span>
-                  <strong className="text-slate-900">Predictive Inventory Modeling:</strong> Time-series forecasting for pharmaceutical demand patterns to eliminate critical supply outages.
+                  <strong className="text-slate-900">Data Processing Pipeline:</strong> Automated attendance data extraction, storage, and reporting to replace manual recording workflows.
                 </span>
               </li>
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-amber-500 shrink-0 mt-0.5" />
                 <span>
-                  <strong className="text-slate-900">Full-Stack Architecture:</strong> Engineered with React, relational database schemas, and microservice endpoints for high fault-tolerance.
+                  <strong className="text-slate-900">System Testing & Debugging:</strong> End-to-end functionality testing, edge case handling, and analytical problem-solving for reliable attendance capture.
                 </span>
               </li>
             </ul>
           </div>
 
           <div className="p-4 bg-purple-100 border-2 border-slate-900 text-xs sm:text-sm font-bold text-purple-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] uppercase tracking-wide leading-relaxed">
-            Author: <strong className="font-black text-slate-900">Mohammed Haneen P M</strong>, Department of Computer Science & Engineering, MEA Engineering College. Published in International Journal of Engineering Research & Technology (IJERT).
+            Author: <strong className="font-black text-slate-900">Mohammed Amjad P M</strong>, Department of Computer Science & Engineering, MEA Engineering College. Published in International Journal of Engineering Research & Technology (IJERT).
           </div>
         </div>
 
         <div className="mt-10 pt-6 border-t-4 border-slate-900 flex items-center justify-between">
           <a
-            href="https://www.ijert.org"
+            href="https://github.com/amjadkondeth"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 px-6 py-4 bg-amber-400 border-4 border-slate-900 text-slate-900 font-black uppercase tracking-widest text-xs transition-all shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:translate-y-1 hover:shadow-none"
           >
             <FileText className="w-5 h-5" />
-            <span>Visit IJERT Journal Archive</span>
+            <span>View GitHub Profile</span>
             <ExternalLink className="w-4 h-4 ml-1" />
           </a>
 

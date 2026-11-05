@@ -170,14 +170,14 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
           </div>
 
           <h2 className="text-4xl sm:text-6xl font-black tracking-tighter text-slate-900 uppercase leading-[0.9]">
-            Passionate Frontend Developer <br />
+            Passionate Full Stack Developer <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-700 to-slate-900">
               Driven by Craft & Innovation
             </span>
           </h2>
 
           <p className="text-slate-700 text-lg sm:text-2xl font-bold max-w-3xl mx-auto leading-snug bg-white p-4 border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] rotate-1">
-            Combining technical discipline with creative curiosity across frontend engineering, published research, and community involvement.
+            Combining technical discipline with creative curiosity across backend engineering, mobile development, and professional experience.
           </p>
         </div>
 
@@ -233,16 +233,16 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                     </div>
 
                     <p className="text-slate-700 font-bold leading-relaxed md:text-right">
-                      Frontend-focused developer with practical experience in React, JavaScript/TypeScript, Next.js, WordPress, responsive UI development, Shopify, animations, and SEO.
+                      Backend-focused developer with practical experience in Node.js, Express.js, MongoDB, REST API design, Flutter mobile development, and database systems.
                     </p>
 
                     <p className="text-slate-600 text-sm font-semibold leading-relaxed md:text-right">
-                      Based in Manjeri, Malappuram, Kerala, India, currently pursuing B.Tech in Computer Science & Engineering.
+                      Based in Bengaluru, Karnataka, India. B.Tech in Computer Science & Engineering, MEA Engineering College (2022-2026), CGPA: 7.86/10.
                     </p>
                   </div>
 
                   <div className="flex flex-wrap gap-2 pt-6 mt-4 border-t-2 border-slate-200 md:justify-end">
-                    {['React Developer', 'Next.js', 'Shopify & Liquid', 'UI/UX Design'].map(
+                    {['Node.js', 'Express.js', 'MongoDB', 'Flutter'].map(
                       (tag) => (
                         <span key={tag} className="px-3 py-1.5 bg-slate-900 text-white font-black text-xs uppercase tracking-widest shadow-[2px_2px_0px_0px_rgba(236,72,153,1)]">
                           {tag}
@@ -339,7 +339,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                       className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-cyan-400 border-2 border-slate-900 text-slate-900 text-sm font-black uppercase tracking-widest shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
                     >
                       <BookOpen className="w-4 h-4" />
-                      <span>Published in IJERT</span>
+                      <span>View Experience Details</span>
                       <ExternalLink className="w-4 h-4 ml-1" />
                     </button>
                   </div>
@@ -492,15 +492,15 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                 <span>Experience</span>
               </div>
               <h3 className="text-3xl sm:text-5xl font-black text-white uppercase tracking-tighter">
-                Freelance Engagements
+                Professional Experience
               </h3>
               <p className="text-slate-300 text-lg font-bold mt-2">
-                Delivering specialized web design, customized storefronts, and performance engineering.
+                Building backend systems, mobile apps, and data-driven solutions for real-world impact.
               </p>
             </div>
 
             <div className="inline-flex items-center self-start md:self-auto px-6 py-3 bg-white text-slate-900 font-black uppercase tracking-widest shadow-[4px_4px_0px_0px_rgba(236,72,153,1)] text-sm -rotate-2">
-              3 Client Collaborations
+              1 Professional Role
             </div>
           </div>
 

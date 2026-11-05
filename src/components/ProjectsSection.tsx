@@ -15,7 +15,7 @@ import {
   AlertCircle,
   RefreshCw,
 } from 'lucide-react';
-import { ProjectItem, DEVELOPER_PROFILE } from '../data/portfolioData';
+import { ProjectItem, DEVELOPER_PROFILE, FEATURED_PROJECTS } from '../data/portfolioData';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -64,9 +64,14 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
         tags: dbProj.tags || [],
       }));
 
-      setProjects(mapped);
+      if (mapped.length > 0) {
+        } else {
+        setProjects(FEATURED_PROJECTS);
+      }
     } catch (err: any) {
-      setFetchError(err.message || 'Error connecting to project database.');
+      console.warn('Falling back to local resume projects:', err?.message);
+      setProjects(FEATURED_PROJECTS);
+      setFetchError(null);
     } finally {
       setIsLoading(false);
     }
@@ -128,10 +133,10 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
 
   const filterTabs = [
     { id: 'all', label: 'All Projects' },
-    { id: 'frontend', label: 'Frontend & Web' },
-    { id: 'ecommerce', label: 'Shopify / E-Commerce' },
-    { id: 'interactive', label: 'Interactive & GSAP' },
     { id: 'fullstack', label: 'Full Stack & APIs' },
+    { id: 'mobile', label: 'Mobile Apps' },
+    { id: 'backend', label: 'Backend & Databases' },
+    { id: 'frontend', label: 'Frontend & Web' },
   ];
 
   return (
@@ -155,7 +160,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
           </h2>
 
           <p className="text-slate-700 text-lg sm:text-xl font-bold bg-white p-4 border-l-8 border-cyan-500 shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] inline-block rotate-1 max-w-3xl">
-            Projects fetched dynamically from PostgreSQL. Changes in the admin dashboard reflect live here. Click any card to launch the modal preview.
+            A showcase of backend systems, mobile apps, and full stack projects. Click any card to view details.
           </p>
         </div>
 
@@ -293,10 +298,10 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
           
           <div className="space-y-2 relative z-10">
             <h4 className="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight">
-              Looking for live deployment previews?
+              Want to see more of my work?
             </h4>
             <p className="text-sm sm:text-base font-bold text-slate-400">
-              Explore the official deployed GitHub Pages portfolio
+              Check out my GitHub for all repositories and projects
             </p>
           </div>
 
@@ -306,7 +311,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
             rel="noreferrer"
             className="relative z-10 inline-flex items-center gap-3 px-8 py-4 bg-cyan-400 text-slate-900 font-black uppercase tracking-widest text-sm shadow-[6px_6px_0px_0px_rgba(255,255,255,1)] hover:shadow-[2px_2px_0px_0px_rgba(255,255,255,1)] hover:translate-x-1 hover:translate-y-1 transition-all"
           >
-            <span>mohammedhaneenpm.github.io</span>
+            <span>github.com/amjadkondeth</span>
             <ExternalLink className="w-5 h-5" />
           </a>
         </div>

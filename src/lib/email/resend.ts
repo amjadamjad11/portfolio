@@ -113,7 +113,7 @@ ${safeAgenda}
     </div>
 
     <div style="border-top: 2px solid #e2e8f0; padding-top: 16px; text-align: center;">
-      <a href="mailto:${safeEmail}?subject=Re:%20Meeting%20Request%20-%20Mohammed%20Haneen" style="display: inline-block; background-color: #0f172a; color: #ffffff; font-size: 13px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; padding: 12px 24px; text-decoration: none; border: 2px solid #0f172a;">
+      <a href="mailto:${safeEmail}?subject=Re:%20Meeting%20Request%20-%20Mohammed%20Amjad" style="display: inline-block; background-color: #0f172a; color: #ffffff; font-size: 13px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; padding: 12px 24px; text-decoration: none; border: 2px solid #0f172a;">
         Reply Directly to Visitor
       </a>
     </div>
@@ -152,7 +152,7 @@ export function generateVisitorConfirmationEmail({
     
     <div style="border-bottom: 3px solid #0f172a; padding-bottom: 16px; margin-bottom: 24px;">
       <span style="background-color: #cffafe; border: 2px solid #0f172a; color: #0891b2; font-size: 11px; font-weight: 900; letter-spacing: 0.1em; padding: 4px 8px; text-transform: uppercase;">
-        Mohammed Haneen P M
+        Mohammed Amjad P M
       </span>
       <h1 style="font-size: 24px; font-weight: 900; color: #0f172a; margin: 12px 0 4px 0; text-transform: uppercase;">
         Thank You for Your Meeting Request!
@@ -194,13 +194,13 @@ export function generateVisitorConfirmationEmail({
 
     <div style="border-top: 2px solid #e2e8f0; padding-top: 20px; margin-top: 24px;">
       <p style="font-size: 13px; font-weight: 800; color: #0f172a; margin: 0;">
-        Mohammed Haneen P M
+        Mohammed Amjad P M
       </p>
       <p style="font-size: 12px; font-weight: 600; color: #64748b; margin: 2px 0 0 0;">
         Frontend Developer & React/Next.js Specialist
       </p>
       <p style="font-size: 12px; color: #0284c7; margin: 4px 0 0 0;">
-        <a href="https://mohammedhaneenpm.github.io/Portfolio" style="color: #0284c7; text-decoration: none; font-weight: 700;">Portfolio Website</a>
+        <a href="https://github.com/amjadkondeth" style="color: #0284c7; text-decoration: none; font-weight: 700;">Portfolio Website</a>
       </p>
     </div>
 

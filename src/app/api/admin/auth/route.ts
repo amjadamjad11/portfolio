@@ -17,7 +17,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const adminEmail = (process.env.ADMIN_EMAIL || 'connect.haneen@gmail.com').trim().toLowerCase();
+    const adminEmail = (process.env.ADMIN_EMAIL || 'amjadamjadkondeth@gmail.com').trim().toLowerCase();
 
     // Verify email matches the admin allowlist before continuing
     if (email.trim().toLowerCase() !== adminEmail) {
@@ -66,7 +66,7 @@ export async function PUT(request: Request) {
       return NextResponse.json({ error: 'Email is required.' }, { status: 400 });
     }
 
-    const adminEmail = (process.env.ADMIN_EMAIL || 'connect.haneen@gmail.com').trim().toLowerCase();
+    const adminEmail = (process.env.ADMIN_EMAIL || 'amjadamjadkondeth@gmail.com').trim().toLowerCase();
     if (email.trim().toLowerCase() !== adminEmail) {
       return NextResponse.json(
         { error: 'Email does not match the registered administrator account.' },

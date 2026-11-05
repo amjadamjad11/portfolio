@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const marqueeText = "AVAILABLE FOR FREELANCE • LET'S WORK TOGETHER • OPEN TO NEW OPPORTUNITIES • ";
+  const marqueeText = "OPEN TO FULL STACK ROLES • LET'S BUILD SOMETHING GREAT • AVAILABLE FOR HIRE • ";
 
   return (
     <footer className="bg-slate-900 border-t-8 border-slate-900 relative overflow-hidden">
@@ -48,14 +48,14 @@ export const Footer: React.FC = () => {
           {/* Identity & Subtext */}
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 text-center sm:text-left">
             <div className="w-16 h-16 bg-slate-900 border-4 border-slate-900 flex items-center justify-center text-white font-black text-2xl shadow-[4px_4px_0px_0px_rgba(236,72,153,1)] shrink-0 rotate-3">
-              H
+              A
             </div>
             <div>
               <div className="text-3xl font-black text-slate-900 tracking-tighter uppercase">
                 {DEVELOPER_PROFILE.name}
               </div>
               <div className="text-sm font-bold text-slate-600 mt-2 uppercase tracking-widest">
-                Frontend Developer • React, Next.js, TypeScript Wordpress & Shopify <br />
+                Full Stack Developer • Node.js, Express.js, Flutter & MongoDB <br />
                 <span className="text-pink-600">{DEVELOPER_PROFILE.location}</span>
               </div>
             </div>
@@ -111,7 +111,7 @@ export const Footer: React.FC = () => {
 
         {/* Copyright */}
         <div className="mt-12 text-center text-xs sm:text-sm font-bold text-slate-400 uppercase tracking-widest">
-          <p>© 2026 Mohammed Haneen P M. All verified portfolio information preserved.</p>
+          <p>© 2026 Mohammed Amjad K. All rights reserved.</p>
         </div>
       </div>
     </footer>

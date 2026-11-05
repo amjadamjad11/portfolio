@@ -276,7 +276,7 @@ export function ProjectForm({ initialData, isEdit = false }: ProjectFormProps) {
               </label>
               <input
                 type="url"
-                placeholder="https://github.com/mohammedhaneenpm/repo"
+                placeholder="https://github.com/amjadkondeth/repo"
                 value={formData.githubUrl}
                 onChange={(e) => setFormData({ ...formData, githubUrl: e.target.value })}
                 className="w-full px-4 py-3 bg-slate-50 border-3 border-slate-900 font-bold text-slate-900 focus:bg-white focus:outline-none shadow-[3px_3px_0px_0px_rgba(15,23,42,1)] text-sm"

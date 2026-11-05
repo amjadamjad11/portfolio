@@ -95,19 +95,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <h1 className="text-5xl sm:text-7xl md:text-8xl font-black tracking-tighter leading-[0.95] text-slate-900 uppercase">
                 Hi, I’m <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-fuchsia-600 to-cyan-500 drop-shadow-sm">
-                  Mohammed Haneen
+                  Mohammed Amjad
                 </span>{' '}
                 <br />
                 <span className="text-slate-900 text-[1.2em] leading-none block mt-2">
-                  P M
+                  K
                 </span>
               </h1>
             </div>
 
             <div className="flex flex-wrap items-center gap-3 text-xl sm:text-2xl font-black uppercase tracking-widest text-slate-900">
-              <span className="bg-pink-100 px-2 text-neon-pink">Frontend Developer</span>
+              <span className="bg-pink-100 px-2 text-neon-pink">Full Stack Developer</span>
               <span className="text-cyan-500">❖</span>
-              <span className="bg-cyan-100 px-2 text-blue-500">React & Next.js Specialist</span>
+              <span className="bg-cyan-100 px-2 text-blue-500">Node.js & Flutter Specialist</span>
             </div>
 
             <p className="text-slate-700 text-lg sm:text-xl leading-relaxed max-w-2xl font-medium border-l-4 border-slate-900 pl-4 bg-white/50 py-2">
@@ -211,7 +211,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   <div className="w-full relative aspect-[3/4] overflow-hidden group">
                     <img
                       src={typeof profileImg === 'string' ? profileImg : profileImg.src}
-                      alt="Mohammed Haneen P M"
+                      alt="Mohammed Amjad K"
                       className="w-full h-full object-cover object-top filter contrast-[1.02] group-hover:scale-102 transition-transform duration-700"
                     />
                     
@@ -232,13 +232,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     <span className="text-blue-600 font-bold">developer</span> = &#123;
                   </div>
                   <div className="pl-6 border-l-2 border-pink-200 ml-2">
-                    <span className="text-slate-500">name</span>: <span className="text-emerald-600 font-bold">&apos;Mohammed Haneen P M&apos;</span>,
+                    <span className="text-slate-500">name</span>: <span className="text-emerald-600 font-bold">&apos;Mohammed Amjad K&apos;</span>,
                   </div>
                   <div className="pl-6 border-l-2 border-pink-200 ml-2">
-                    <span className="text-slate-500">role</span>: <span className="text-emerald-600 font-bold">&apos;Frontend Developer&apos;</span>,
+                    <span className="text-slate-500">role</span>: <span className="text-emerald-600 font-bold">&apos;Full Stack Developer&apos;</span>,
                   </div>
                   <div className="pl-6 border-l-2 border-pink-200 ml-2">
-                    <span className="text-slate-500">location</span>: <span className="text-emerald-600 font-bold">&apos;Manjeri, Kerala, India&apos;</span>,
+                    <span className="text-slate-500">location</span>: <span className="text-emerald-600 font-bold">&apos;Bengaluru, India&apos;</span>,
                   </div>
                   <div className="pl-6 border-l-2 border-pink-200 ml-2">
                     <span className="text-slate-500">degree</span>: <span className="text-emerald-600 font-bold">&apos;B.Tech CSE (2022-2026)&apos;</span>,
@@ -248,10 +248,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   </div>
                   <div className="pl-6 border-l-2 border-pink-200 ml-2">
                     <span className="text-slate-500">focus</span>: [
-                    <span className="text-emerald-600 font-bold">&apos;React&apos;</span>,{' '}
-                    <span className="text-emerald-600 font-bold">&apos;Next.js&apos;</span>,{' '}
-                    <span className="text-emerald-600 font-bold">&apos;TypeScript&apos;</span>,{' '}
-                    <span className="text-emerald-600 font-bold">&apos;UI/UX&apos;</span>],
+                    <span className="text-emerald-600 font-bold">&apos;Node.js&apos;</span>,{' '}
+                    <span className="text-emerald-600 font-bold">&apos;Flutter&apos;</span>,{' '}
+                    <span className="text-emerald-600 font-bold">&apos;MongoDB&apos;</span>,{' '}
+                    <span className="text-emerald-600 font-bold">&apos;REST APIs&apos;</span>],
                   </div>
                   <div className="pl-6 border-l-2 border-pink-200 ml-2">
                     <span className="text-slate-500">availableForHire</span>: <span className="text-pink-600 font-bold">true</span>

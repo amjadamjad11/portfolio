@@ -9,7 +9,7 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Mohammed Haneen P M | Frontend & Full Stack Developer',
+  title: 'Mohammed Amjad P M | Frontend & Full Stack Developer',
   description:
     'Frontend-focused developer with practical experience in React, TypeScript, Next.js, responsive UI development, animations, and SEO.',
 };

@@ -107,6 +107,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             <div className="flex flex-wrap items-center gap-3 text-xl sm:text-2xl font-black uppercase tracking-widest text-slate-900">
               <span className="bg-pink-100 px-2 text-neon-pink">Full Stack Developer</span>
               <span className="text-cyan-500">❖</span>
+              <span className="bg-amber-100 px-2 text-amber-600">Data Scientist</span>
+              <span className="text-cyan-500">❖</span>
               <span className="bg-cyan-100 px-2 text-blue-500">Node.js & Flutter Specialist</span>
             </div>
 
@@ -235,7 +237,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                     <span className="text-slate-500">name</span>: <span className="text-emerald-600 font-bold">&apos;Mohammed Amjad K&apos;</span>,
                   </div>
                   <div className="pl-6 border-l-2 border-pink-200 ml-2">
-                    <span className="text-slate-500">role</span>: <span className="text-emerald-600 font-bold">&apos;Full Stack Developer&apos;</span>,
+                    <span className="text-slate-500">role</span>: <span className="text-emerald-600 font-bold">&apos;Full Stack Developer &amp; Data Scientist&apos;</span>,
                   </div>
                   <div className="pl-6 border-l-2 border-pink-200 ml-2">
                     <span className="text-slate-500">location</span>: <span className="text-emerald-600 font-bold">&apos;Bengaluru, India&apos;</span>,

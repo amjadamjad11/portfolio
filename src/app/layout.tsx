@@ -9,9 +9,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: 'Mohammed Amjad P M | Frontend & Full Stack Developer',
+  title: 'Mohammed Amjad K | Full Stack Developer & Data Scientist',
   description:
-    'Frontend-focused developer with practical experience in React, TypeScript, Next.js, responsive UI development, animations, and SEO.',
+    'Full Stack Developer & Data Scientist with hands-on experience in Node.js, Express, MongoDB, Flutter, and Computer Vision at Zoople Technologies.',
 };
 
 export default function RootLayout({

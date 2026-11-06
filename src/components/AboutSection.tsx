@@ -170,7 +170,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
           </div>
 
           <h2 className="text-4xl sm:text-6xl font-black tracking-tighter text-slate-900 uppercase leading-[0.9]">
-            Passionate Full Stack Developer <br />
+            Passionate Full Stack Developer & Data Scientist <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-700 to-slate-900">
               Driven by Craft & Innovation
             </span>

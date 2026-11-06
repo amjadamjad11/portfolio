@@ -42,8 +42,8 @@ export interface SkillGroup {
 export const DEVELOPER_PROFILE = {
   name: 'Mohammed Amjad K',
   shortName: 'Mohammed Amjad',
-  role: 'Full Stack Developer',
-  specialty: 'Node.js & Flutter Specialist',
+  role: 'Full Stack Developer & Data Scientist',
+  specialty: 'Node.js, Flutter & Data Science Specialist',
   location: 'Bengaluru, Karnataka, India',
   email: 'amjadamjadkondeth@gmail.com',
   phone: '+91-7994767824',
@@ -102,22 +102,23 @@ export const DEVELOPER_PROFILE = {
 
 export const CODE_SNIPPET = `const developer = {
   name: 'Mohammed Amjad K',
-  role: 'Full Stack Developer',
+  role: 'Full Stack Developer & Data Scientist',
   location: 'Bengaluru, India',
   degree: 'B.Tech CSE (2022-2026)',
   college: 'MEA Engineering College',
-  focus: ['Node.js', 'Flutter', 'MongoDB', 'REST APIs'],
+  focus: ['Node.js', 'Flutter', 'Data Science', 'MongoDB', 'REST APIs'],
   availableForHire: true
 };`;
 
 export const TICKER_ITEMS = [
+  'FULL STACK DEVELOPER',
+  'DATA SCIENTIST',
   'NODE.JS & EXPRESS',
   'REST APIs & CRUD',
   'FLUTTER & DART',
   'MONGODB & FIREBASE',
-  'JAVASCRIPT',
   'PYTHON & SQL',
-  'GIT & GITHUB',
+  'CCTV AUTOMATION',
   'PROBLEM SOLVING',
 ];
 

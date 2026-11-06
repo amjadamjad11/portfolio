@@ -153,35 +153,38 @@ export async function POST(request: Request) {
     }
 
     // 5. Database Persistence FIRST (Before attempting emails)
-    const { data: savedMeeting, error: insertError } = await adminSupabase
-      .from('meetings')
-      .insert({
-        full_name: fullName.trim(),
-        email: email.trim().toLowerCase(),
-        preferred_date: preferredDate,
-        preferred_time: preferredTime,
-        agenda: agenda.trim(),
-        idempotency_key: clientKey,
-        ip_address: clientIp,
-        admin_email_status: 'pending',
-        visitor_email_status: 'pending',
-      })
-      .select()
-      .single();
+    let savedMeeting = null;
+    try {
+      const { data, error: insertError } = await adminSupabase
+        .from('meetings')
+        .insert({
+          full_name: fullName.trim(),
+          email: email.trim().toLowerCase(),
+          preferred_date: preferredDate,
+          preferred_time: preferredTime,
+          agenda: agenda.trim(),
+          idempotency_key: clientKey,
+          ip_address: clientIp,
+          admin_email_status: 'pending',
+          visitor_email_status: 'pending',
+        })
+        .select()
+        .single();
 
-    if (insertError) {
-      // Check if duplicate key violation occurred concurrently
-      if (insertError.code === '23505') {
-        return NextResponse.json({
-          success: true,
-          persisted: true,
-          message: 'Your meeting request has already been received.',
-        });
+      if (insertError) {
+        if (insertError.code === '23505') {
+          return NextResponse.json({
+            success: true,
+            persisted: true,
+            message: 'Your meeting request has already been received.',
+          });
+        }
+        console.warn('Could not insert meeting into DB table:', insertError.message);
+      } else {
+        savedMeeting = data;
       }
-      return NextResponse.json(
-        { error: `Database error: ${insertError.message}` },
-        { status: 500 }
-      );
+    } catch (dbErr: any) {
+      console.warn('Database error during meeting insert:', dbErr.message);
     }
 
     // 6. Resend Email Dispatch (Non-destructive: booking remains safe even if emails fail)
@@ -191,7 +194,7 @@ export async function POST(request: Request) {
     let visitorEmailError: string | null = null;
 
     const resend = getResendClient();
-    const adminEmail = process.env.ADMIN_EMAIL?.trim();
+    const adminEmail = process.env.ADMIN_EMAIL?.trim() || 'amjadamjadkondeth@gmail.com';
     const fromEmail = process.env.RESEND_FROM_EMAIL?.trim() || 'onboarding@resend.dev';
 
     if (resend && adminEmail) {
@@ -248,16 +251,18 @@ export async function POST(request: Request) {
         visitorEmailError = err.message || 'Error executing visitor email request';
       }
 
-      // 7. Update Email Delivery Statuses in PostgreSQL
-      await adminSupabase
-        .from('meetings')
-        .update({
-          admin_email_status: adminEmailStatus,
-          visitor_email_status: visitorEmailStatus,
-          admin_email_error: adminEmailError,
-          visitor_email_error: visitorEmailError,
-        })
-        .eq('id', savedMeeting.id);
+      // 7. Update Email Delivery Statuses in PostgreSQL (if meeting was saved)
+      if (savedMeeting?.id) {
+        await adminSupabase
+          .from('meetings')
+          .update({
+            admin_email_status: adminEmailStatus,
+            visitor_email_status: visitorEmailStatus,
+            admin_email_error: adminEmailError,
+            visitor_email_error: visitorEmailError,
+          })
+          .eq('id', savedMeeting.id);
+      }
     }
 
     // 8. Return honest status response
@@ -266,8 +271,8 @@ export async function POST(request: Request) {
 
     return NextResponse.json({
       success: true,
-      persisted: true,
-      id: savedMeeting.id,
+      persisted: Boolean(savedMeeting?.id),
+      id: savedMeeting?.id || null,
       emailNotification: {
         admin: adminEmailStatus,
         visitor: visitorEmailStatus,

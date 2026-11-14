@@ -61,7 +61,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
       if (!timelineRef.current || nodes.length === 0) return;
 
       const timelineRect = timelineRef.current.getBoundingClientRect();
-      
+
       // Calculate coordinates for each node relative to the timeline container
       const nodeCoords = nodes.map(node => {
         const rect = node.getBoundingClientRect();
@@ -132,9 +132,9 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
     window.addEventListener('resize', setupTimeline);
 
     cards.forEach((card) => {
-      gsap.fromTo(card, 
-        { 
-          y: 100, 
+      gsap.fromTo(card,
+        {
+          y: 100,
           opacity: 0,
           scale: 0.95,
         },
@@ -160,7 +160,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
     <section ref={sectionRef} id="about" className="py-20 md:py-32 relative bg-[#f1f0ea] overflow-hidden">
       {/* Abstract Background pattern - matching the light warm gray of the reference */}
       <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#1e293b 2px, transparent 2px)', backgroundSize: '30px 30px' }} />
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="space-y-6 mb-24 max-w-4xl mx-auto text-center">
@@ -183,7 +183,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
 
         {/* Timeline Container */}
         <div className="relative max-w-5xl mx-auto" ref={timelineRef}>
-          
+
           {/* Dynamic SVG Path Background: Curved & Striped / Dashed */}
           <svg className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
             {/* Soft background shadow glow for contrast */}
@@ -196,20 +196,20 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
               strokeLinecap="round"
             />
             {/* Main striped / dashed curved path */}
-            <path 
+            <path
               ref={svgPathRef}
-              d={pathData} 
-              fill="none" 
-              stroke="#0f172a" 
-              strokeWidth="5" 
+              d={pathData}
+              fill="none"
+              stroke="#0f172a"
+              strokeWidth="5"
               strokeDasharray="14 10"
               strokeLinecap="round"
               className="transition-all duration-300"
             />
           </svg>
-          
+
           {/* Moving Marker (Yellow circle with black border like reference) */}
-          <div 
+          <div
             ref={markerRef}
             className="absolute w-6 h-6 -ml-3 -mt-3 bg-[#eab308] border-4 border-slate-900 rounded-full flex items-center justify-center z-20 shadow-md"
             style={{ left: '50%', top: 0 }}
@@ -217,7 +217,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
 
           {/* Timeline Events */}
           <div className="space-y-16 md:space-y-24 relative z-10 pt-10">
-            
+
             {/* Card 1: Background (Left) */}
             <div className="timeline-card relative flex flex-col md:flex-row justify-between items-center w-full">
               <div className="md:w-5/12 w-full pl-12 md:pl-0 md:pr-12 md:text-right relative">
@@ -232,24 +232,30 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                       </h3>
                     </div>
 
-                    <p className="text-slate-700 font-bold leading-relaxed md:text-right">
-                      Backend-focused developer with practical experience in Node.js, Express.js, MongoDB, REST API design, Flutter mobile development, and database systems.
-                    </p>
+                    <div className="space-y-3 md:text-right">
+                      <div>
+                        <p className="text-slate-900 text-sm font-black uppercase tracking-widest mb-1">Experience</p>
+                        <p className="text-slate-600 text-sm font-semibold leading-relaxed">
+                          Data Scientist · Zoople Technologies, Calicut (6 Months, 2026)
+                        </p>
+                        <p className="text-slate-500 text-xs font-medium leading-relaxed mt-0.5">
+                          Built a CCTV-based employee attendance automation system using real-time camera monitoring and data processing pipelines.
+                        </p>
+                      </div>
 
-                    <p className="text-slate-600 text-sm font-semibold leading-relaxed md:text-right">
-                      Based in Bengaluru, Karnataka, India. B.Tech in Computer Science & Engineering, MEA Engineering College (2022-2026), CGPA: 7.86/10.
-                    </p>
+                      <div>
+                        <p className="text-slate-900 text-sm font-black uppercase tracking-widest mb-1">Education</p>
+                        <p className="text-slate-600 text-sm font-semibold leading-relaxed">
+                          MEA Engineering College, Kerala
+                        </p>
+                        <p className="text-slate-500 text-xs font-medium leading-relaxed mt-0.5">
+                          B.Tech in Computer Science & Engineering · 2022–2026 · CGPA: 7.86/10
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
-                  <div className="flex flex-wrap gap-2 pt-6 mt-4 border-t-2 border-slate-200 md:justify-end">
-                    {['Node.js', 'Express.js', 'MongoDB', 'Flutter'].map(
-                      (tag) => (
-                        <span key={tag} className="px-3 py-1.5 bg-slate-900 text-white font-black text-xs uppercase tracking-widest shadow-[2px_2px_0px_0px_rgba(236,72,153,1)]">
-                          {tag}
-                        </span>
-                      )
-                    )}
-                  </div>
+
                 </div>
                 {/* Node */}
                 <div className="timeline-node absolute top-1/2 -translate-y-1/2 left-0 md:left-auto md:-right-8 w-4 h-4 bg-[#eab308] border-4 border-slate-900 rounded-full z-10" />
@@ -265,7 +271,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
               <div className="md:w-5/12 w-full pl-12 relative">
                 {/* Node */}
                 <div className="timeline-node absolute top-1/2 -translate-y-1/2 left-0 md:-left-8 w-4 h-4 bg-[#eab308] border-4 border-slate-900 rounded-full z-10" />
-                
+
                 <div className="p-6 sm:p-7 bg-white border-4 border-slate-900 shadow-[8px_8px_0px_0px_rgba(168,85,247,1)] hover:translate-x-1 hover:-translate-y-1 hover:shadow-[12px_12px_0px_0px_rgba(168,85,247,1)] transition-all flex flex-col justify-between group rounded-none">
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
@@ -277,31 +283,71 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                       </h3>
                     </div>
 
-                    <div>
+                    {/* College */}
+                    <div className="space-y-2">
                       <h4 className="text-lg font-black text-slate-900 uppercase">
                         {DEVELOPER_PROFILE.education.degree}
                       </h4>
-                      <div className="text-sm font-bold text-purple-600 mt-1">
+                      <div className="text-sm font-bold text-purple-600">
                         {DEVELOPER_PROFILE.education.college}
                       </div>
-                      <div className="text-xs font-semibold text-slate-500 mt-1">
+                      <div className="text-xs font-semibold text-slate-500">
                         {DEVELOPER_PROFILE.education.university}
+                      </div>
+                      <div className="flex items-center gap-3 flex-wrap">
+                        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-purple-100 border-2 border-slate-900 text-xs text-slate-900 font-bold uppercase shadow-[2px_2px_0px_0px_rgba(15,23,42,1)]">
+                          <Calendar className="w-4 h-4 text-purple-600" />
+                          <span>2022 – 2026</span>
+                        </div>
+                        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-900 border-2 border-slate-900 text-xs text-white font-black uppercase shadow-[2px_2px_0px_0px_rgba(168,85,247,1)]">
+                          CGPA: 7.86 / 10
+                        </div>
                       </div>
                     </div>
 
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-purple-100 border-2 border-slate-900 text-xs text-slate-900 font-bold uppercase shadow-[2px_2px_0px_0px_rgba(15,23,42,1)]">
-                      <Calendar className="w-4 h-4 text-purple-600" />
-                      <span>{DEVELOPER_PROFILE.education.period}</span>
+                    {/* Higher Secondary */}
+                    <div className="border-t-2 border-slate-200 pt-4 space-y-2">
+                      <h4 className="text-lg font-black text-slate-900 uppercase">
+                        Higher Secondary School
+                      </h4>
+                      <div className="text-sm font-bold text-purple-600">
+                        GVHSS Makkaramba
+                      </div>
+                      <div className="text-xs font-semibold text-slate-500">
+                        Science Stream (HSE)
+                      </div>
+                      <div className="flex items-center gap-3 flex-wrap">
+                        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-purple-100 border-2 border-slate-900 text-xs text-slate-900 font-bold uppercase shadow-[2px_2px_0px_0px_rgba(15,23,42,1)]">
+                          <Calendar className="w-4 h-4 text-purple-600" />
+                          <span>2020 – 2022</span>
+                        </div>
+                        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-900 border-2 border-slate-900 text-xs text-white font-black uppercase shadow-[2px_2px_0px_0px_rgba(168,85,247,1)]">
+                          94%
+                        </div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="pt-4 mt-4 border-t-2 border-slate-200 space-y-1">
-                    <div className="text-xs font-black uppercase tracking-widest text-slate-400">
-                      Community & Leadership
+                    {/* High School */}
+                    <div className="border-t-2 border-slate-200 pt-4 space-y-2">
+                      <h4 className="text-lg font-black text-slate-900 uppercase">
+                        High School
+                      </h4>
+                      <div className="text-sm font-bold text-purple-600">
+                        AMHSS
+                      </div>
+                      <div className="text-xs font-semibold text-slate-500">
+                        Secondary School (SSLC)
+                      </div>
+                      <div className="flex items-center gap-3 flex-wrap">
+                        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-purple-100 border-2 border-slate-900 text-xs text-slate-900 font-bold uppercase shadow-[2px_2px_0px_0px_rgba(15,23,42,1)]">
+                          <Calendar className="w-4 h-4 text-purple-600" />
+                          <span>2019 – 2020</span>
+                        </div>
+                        <div className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-900 border-2 border-slate-900 text-xs text-white font-black uppercase shadow-[2px_2px_0px_0px_rgba(168,85,247,1)]">
+                          88%
+                        </div>
+                      </div>
                     </div>
-                    <p className="text-sm font-bold text-slate-700 leading-relaxed">
-                      {DEVELOPER_PROFILE.education.communityLeadership}
-                    </p>
                   </div>
                 </div>
               </div>
@@ -334,14 +380,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                   </div>
 
                   <div className="pt-6 mt-4 border-t-2 border-slate-200">
-                    <button
-                      onClick={onOpenPublicationModal}
-                      className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-cyan-400 border-2 border-slate-900 text-slate-900 text-sm font-black uppercase tracking-widest shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all"
-                    >
+                    <a href="https://github.com/amjadamjad11" target="_blank" rel="noopener noreferrer" className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-cyan-400 border-2 border-slate-900 text-slate-900 text-sm font-black uppercase tracking-widest shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
                       <BookOpen className="w-4 h-4" />
                       <span>View Experience Details</span>
                       <ExternalLink className="w-4 h-4 ml-1" />
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>

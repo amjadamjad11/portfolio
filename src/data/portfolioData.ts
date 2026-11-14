@@ -49,9 +49,9 @@ export const DEVELOPER_PROFILE = {
   phone: '+91-7994767824',
   availableForHire: true,
   statusText: 'Available for Opportunities',
-  portfolioGithubUrl: 'https://github.com/amjadkondeth',
+  portfolioGithubUrl: 'https://github.com/amjadamjad11',
   social: {
-    github: 'https://github.com/amjadkondeth',
+    github: 'https://github.com/amjadamjad11',
     linkedin: 'https://linkedin.com/in/amjadkondeth',
     instagram: 'https://instagram.com/amjadkondeth',
   },

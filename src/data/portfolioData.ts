@@ -4,9 +4,9 @@ export interface ProjectItem {
   categoryBadge: string;
   description: string;
   tags: string[];
-  category: 'all' | 'frontend' | 'ecommerce' | 'interactive' | 'fullstack' | 'mobile' | 'backend';
+  category: Array<'frontend' | 'ecommerce' | 'interactive' | 'fullstack' | 'mobile' | 'backend'>;
   accentColor: string;
-  iconName: 'sparkles' | 'shopping-cart' | 'activity' | 'glasses' | 'shield' | 'layers';
+  iconName: 'sparkles' | 'shopping-cart' | 'activity' | 'glasses' | 'shield' | 'layers' | 'brain' | 'calendar' | 'cpu';
   imageUrl?: string;
   imagePath?: string;
   liveUrl?: string;
@@ -24,7 +24,7 @@ export interface FreelanceClient {
   title: string;
   subtitle: string;
   type: string;
-  icon: 'truck' | 'zap' | 'cake';
+  icon: 'truck' | 'zap' | 'cake' | 'cpu';
   iconColor: string;
   bgColor: string;
   details: string;
@@ -212,11 +212,10 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     id: 'clinicflow',
     title: 'ClinicFlow',
     categoryBadge: 'Backend API',
-    category: 'fullstack',
+    category: ['fullstack', 'backend', 'frontend'],
     accentColor: '#ec4899',
     iconName: 'shield',
-    description:
-      'A modular clinic-management backend with REST APIs, structured data models, MVC controllers, and routing layers. Full CRUD operations for patient, doctor, and appointment management.',
+    description: 'A modular clinic-management backend with REST APIs, structured data models, MVC controllers, and routing layers. Full CRUD operations for patient, doctor, and appointment management.',
     tags: ['Node.js', 'Express.js', 'MongoDB', 'REST APIs'],
     metrics: 'Full CRUD API + MongoDB Atlas',
     githubUrl: 'https://github.com/amjadkondeth/clinicflow',
@@ -240,11 +239,10 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     id: 'location-safety',
     title: 'Flutter Location Safety App',
     categoryBadge: 'Mobile App',
-    category: 'fullstack',
+    category: ['fullstack', 'mobile', 'backend', 'frontend'],
     accentColor: '#a855f7',
     iconName: 'sparkles',
-    description:
-      'A cross-platform mobile app with secure user authentication, real-time map-based location tracking, and geographic safety zone monitoring with continuous background location updates.',
+    description: 'with secure user authentication, real-time map-based location tracking, and geographic safety zone monitoring with continuous background location updates.',
     tags: ['Flutter', 'Dart', 'Location APIs', 'Maps'],
     metrics: 'Real-Time GPS + Safety Zones',
     githubUrl: 'https://github.com/amjadkondeth/location-safety-app',
@@ -268,11 +266,10 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     id: 'craveguard',
     title: 'CraveGuard',
     categoryBadge: 'Mobile App',
-    category: 'fullstack',
+    category: ['mobile', 'backend'],
     accentColor: '#06b6d4',
     iconName: 'activity',
-    description:
-      'A smoking cessation support app with habit tracking, craving support modules, money-saved visualizations, and location-based risk zone monitoring powered by Firebase real-time sync.',
+    description: 'with habit tracking, craving support modules, money-saved visualizations, and location-based risk zone monitoring powered by Firebase real-time sync.',
     tags: ['Flutter', 'Dart', 'Firebase', 'Location Services'],
     metrics: 'Firebase Real-Time + Location Alerts',
     githubUrl: 'https://github.com/amjadkondeth/craveguard',
@@ -296,11 +293,10 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
     id: 'cctv-attendance',
     title: 'CCTV Smart Attendance',
     categoryBadge: 'AI System',
-    category: 'fullstack',
+    category: ['fullstack', 'backend', 'frontend'],
     accentColor: '#f59e0b',
     iconName: 'glasses',
-    description:
-      'An automated employee attendance system using CCTV-based camera monitoring to eliminate manual check-in. Built at Zoople Technologies with data processing, debugging, and system validation.',
+    description: 'using CCTV-based camera monitoring to eliminate manual check-in. Built at Zoople Technologies with data processing, debugging, and system validation.',
     tags: ['Camera Monitoring', 'Data Processing', 'Automation', 'Python'],
     metrics: 'Automated Attendance Recording',
     fullDetails: {
@@ -316,6 +312,96 @@ export const FEATURED_PROJECTS: ProjectItem[] = [
         'Camera monitoring pipeline with frame-by-frame processing',
         'Attendance data storage and query optimization',
         'Debugging and testing methodology for edge cases in monitoring',
+      ],
+    },
+  },
+  {
+    id: 'neurolex',
+    title: 'NeuroLex – Web-Based Dyslexia Support and Assessment Platform',
+    categoryBadge: 'IEEE Published',
+    category: ['frontend', 'backend'],
+    accentColor: '#6366f1',
+    iconName: 'brain',
+    description: 'featuring a 45-question adaptive assessment covering five key domains: phonological awareness, rapid automatized naming (RAN), reading fluency, orthographic processing, and working memory. Evaluates responses to identify potential risk patterns and provides personalized learning insights.',
+    tags: ['HTML5', 'CSS3', 'JavaScript', 'Adaptive Assessment Logic'],
+    metrics: 'IEEE Published · 45-Question Adaptive Assessment',
+    liveUrl: 'https://ieeexplore.ieee.org/document/11712595',
+    fullDetails: {
+      overview:
+        'NeuroLex is a web-based dyslexia support platform designed to assist in the early identification of potential dyslexia-related learning difficulties. It features a 45-question adaptive assessment covering five key cognitive and language domains.',
+      features: [
+        '45-question adaptive assessment interface',
+        'Five-domain evaluation: phonological awareness, RAN, reading fluency, orthographic processing, working memory',
+        'Potential dyslexia risk pattern identification',
+        'Personalized learning insights generation',
+        'Interactive web-based assessment interface',
+      ],
+      technicalHighlights: [
+        'Adaptive assessment logic with dynamic question flow',
+        'Domain-wise scoring and risk evaluation engine',
+        'Responsive web interface built with vanilla HTML5, CSS3, and JavaScript',
+      ],
+    },
+  },
+  {
+    id: 'turf-billing',
+    title: 'Turf Billing System – Turf Booking and Billing Management Application',
+    categoryBadge: 'Mobile App',
+    category: ['mobile', 'backend'],
+    accentColor: '#10b981',
+    iconName: 'calendar',
+    description: ' billing management application designed to simplify the daily operations of sports turf facilities.Streamlines turf reservations, scheduling, customer management, and automated billing to reduce manual operations.',
+    tags: ['Flutter', 'Dart'],
+    metrics: 'Automated Booking & Billing',
+    fullDetails: {
+      overview:
+        'A mobile application built to manage turf facility operations including reservations, scheduling, customer management, and automated billing — reducing manual overhead for sports facility owners.',
+      features: [
+        'Turf booking and reservation management',
+        'Booking schedule management',
+        'Customer information management',
+        'Automated billing',
+        'Payment and booking status management',
+        'Mobile-friendly interface',
+      ],
+      technicalHighlights: [
+        'Flutter cross-platform mobile development with Dart',
+        'Booking state management and scheduling logic',
+        'Automated billing calculation and status tracking',
+      ],
+    },
+  },
+  {
+    id: 'furniture-ai',
+    title: 'FurnitureRecommendationAI – Hybrid Multimodal Product Search and Recommendation Engine',
+    categoryBadge: 'AI/ML Project',
+    category: ['fullstack', 'backend', 'frontend'],
+    accentColor: '#f97316',
+    iconName: 'cpu',
+    description: 'using the Amazon Reviews 2023 Home & Kitchen dataset. Combines collaborative filtering, NLP, and computer vision with text and image embeddings, semantic similarity, and AI-based preference extraction for personalized furniture recommendations.',
+    tags: ['Python', 'PyTorch', 'DistilBERT', 'ResNet-50', 'Mistral', 'Streamlit'],
+    metrics: '~30K Products · 187K+ Images · Amazon 2023 Dataset',
+    fullDetails: {
+      overview:
+        'A hybrid multimodal product search and recommendation engine built using the Amazon Reviews 2023 Home & Kitchen dataset. The system combines collaborative filtering, NLP, and computer vision to deliver relevant and personalized furniture recommendations.',
+      features: [
+        'Hybrid recommendation combining collaborative and content-based signals',
+        'Multimodal product understanding using text and images',
+        'Semantic search using natural-language queries',
+        'AI-based user preference extraction',
+        'Image captioning for product understanding',
+        'Price and customer-rating filtering',
+        'Product ranking using normalized weighted scores',
+        'Large-scale product catalog processing (~30K products, 187K+ images)',
+      ],
+      technicalHighlights: [
+        'ALS (Alternating Least Squares) for collaborative filtering',
+        'Sentence Transformers (MiniLM) and DistilBERT for text embeddings',
+        'ResNet-50 for visual feature extraction',
+        'BLIP for image captioning',
+        'Mistral for AI-based preference extraction',
+        'CUDA / GPU acceleration for large-scale processing',
+        'Streamlit dashboard for interactive search and recommendations',
       ],
     },
   },

@@ -14,6 +14,9 @@ import {
   Code2,
   AlertCircle,
   RefreshCw,
+  Brain,
+  Calendar,
+  Cpu,
 } from 'lucide-react';
 import { ProjectItem, DEVELOPER_PROFILE, FEATURED_PROJECTS } from '../data/portfolioData';
 import gsap from 'gsap';
@@ -83,7 +86,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
 
   const filteredProjects = projects.filter((p) => {
     if (activeFilter === 'all') return true;
-    return p.category === activeFilter;
+    return Array.isArray(p.category) ? p.category.includes(activeFilter) : p.category === activeFilter;
   });
 
   useGSAP(() => {
@@ -126,6 +129,12 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
         return <Shield className="w-8 h-8 text-white" />;
       case 'layers':
         return <Layers className="w-8 h-8 text-white" />;
+      case 'brain':
+        return <Brain className="w-8 h-8 text-white" />;
+      case 'calendar':
+        return <Calendar className="w-8 h-8 text-white" />;
+      case 'cpu':
+        return <Cpu className="w-8 h-8 text-white" />;
       default:
         return <Code2 className="w-8 h-8 text-white" />;
     }

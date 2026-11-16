@@ -68,7 +68,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
       }));
 
       if (mapped.length > 0) {
-        } else {
+      } else {
         setProjects(FEATURED_PROJECTS);
       }
     } catch (err: any) {
@@ -86,7 +86,8 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
 
   const filteredProjects = projects.filter((p) => {
     if (activeFilter === 'all') return true;
-    return Array.isArray(p.category) ? p.category.includes(activeFilter) : p.category === activeFilter;
+    const cats = Array.isArray(p.category) ? p.category : [p.category];
+    return cats.includes(activeFilter as typeof cats[number]);
   });
 
   useGSAP(() => {
@@ -179,11 +180,10 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
             <button
               key={tab.id}
               onClick={() => setActiveFilter(tab.id)}
-              className={`px-6 py-3 text-sm font-black uppercase tracking-widest rounded-none transition-all duration-300 cursor-pointer border-2 border-slate-900 ${
-                activeFilter === tab.id
+              className={`px-6 py-3 text-sm font-black uppercase tracking-widest rounded-none transition-all duration-300 cursor-pointer border-2 border-slate-900 ${activeFilter === tab.id
                   ? 'bg-cyan-400 text-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] translate-x-[-2px] translate-y-[-2px]'
                   : 'bg-white text-slate-600 hover:text-slate-900 hover:shadow-[2px_2px_0px_0px_rgba(15,23,42,1)] hover:bg-slate-50'
-              }`}
+                }`}
             >
               {tab.label}
             </button>
@@ -243,11 +243,10 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
                 <div
                   key={project.id}
                   onClick={() => onSelectProject(project)}
-                  className={`p-6 sm:p-8 bg-white border-4 border-slate-900 hover:shadow-[12px_12px_0px_0px_rgba(15,23,42,1)] transition-all duration-300 flex flex-col justify-between group cursor-pointer ${
-                    isEven
+                  className={`p-6 sm:p-8 bg-white border-4 border-slate-900 hover:shadow-[12px_12px_0px_0px_rgba(15,23,42,1)] transition-all duration-300 flex flex-col justify-between group cursor-pointer ${isEven
                       ? 'shadow-[8px_8px_0px_0px_rgba(236,72,153,1)] rotate-1 hover:rotate-0'
                       : 'shadow-[8px_8px_0px_0px_rgba(6,182,212,1)] -rotate-1 hover:rotate-0'
-                  }`}
+                    }`}
                 >
                   {/* Project Image Preview */}
                   {project.imageUrl && (
@@ -304,7 +303,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
         {/* Live GitHub Pages Portfolio Callout Banner */}
         <div className="mt-20 p-8 sm:p-10 bg-slate-900 border-4 border-slate-900 shadow-[16px_16px_0px_0px_rgba(6,182,212,1)] flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left relative overflow-hidden group">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_100%_0%,_rgba(236,72,153,0.3),_transparent_40%)] pointer-events-none" />
-          
+
           <div className="space-y-2 relative z-10">
             <h4 className="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight">
               Want to see more of my work?

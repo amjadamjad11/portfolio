@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useRef } from 'react';
-import { ArrowUp, Github, Linkedin, Instagram, Mail, Sparkles } from 'lucide-react';
+import { ArrowUp, Github, Linkedin, Mail, Sparkles } from 'lucide-react';
 import { DEVELOPER_PROFILE } from '../data/portfolioData';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -80,15 +80,6 @@ export const Footer: React.FC = () => {
               aria-label="LinkedIn"
             >
               <Linkedin className="w-6 h-6" />
-            </a>
-            <a
-              href={DEVELOPER_PROFILE.social.instagram}
-              target="_blank"
-              rel="noreferrer"
-              className="p-4 bg-pink-100 border-2 border-slate-900 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:bg-pink-200 text-pink-700 transition-all hover:-translate-y-1"
-              aria-label="Instagram"
-            >
-              <Instagram className="w-6 h-6" />
             </a>
             <a
               href={`mailto:${DEVELOPER_PROFILE.email}`}

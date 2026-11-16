@@ -130,12 +130,22 @@ export const FREELANCE_CLIENTS: FreelanceClient[] = [
   {
     id: 'zoople',
     title: 'Zoople Technologies',
-    subtitle: 'Data Scientist — CCTV Attendance Automation',
-    type: 'AI & Computer Vision Project',
+    subtitle: 'AI Developer – CCTV Attendance Automation',
+    type: 'AI & Computer Vision',
     icon: 'zap',
     iconColor: '#f87171',
     bgColor: 'rgba(239, 68, 68, 0.12)',
-    details: 'Developed a CCTV-based employee attendance system to automate attendance recording through real-time camera monitoring, reducing manual effort significantly.',
+    details: 'Developed an AI-powered CCTV attendance system to automate student and staff attendance recording using computer vision and camera monitoring.',
+  },
+  {
+    id: 'furniture-ai',
+    title: 'Furniture Recommendation AI',
+    subtitle: 'Data Science & AI Engineering',
+    type: 'Hybrid Multimodal Recommendation Engine',
+    icon: 'cpu',
+    iconColor: '#22d3ee',
+    bgColor: 'rgba(34, 211, 238, 0.12)',
+    details: 'Built a multimodal product search and recommendation engine combining NLP, computer vision, collaborative filtering, and semantic similarity to deliver personalized furniture recommendations.',
   },
   {
     id: 'clinicflow',
@@ -145,7 +155,7 @@ export const FREELANCE_CLIENTS: FreelanceClient[] = [
     icon: 'truck',
     iconColor: '#a855f7',
     bgColor: 'rgba(168, 85, 247, 0.12)',
-    details: 'Architected a modular clinic-management backend with RESTful APIs, MongoDB data models, MVC controllers, and full CRUD operations for patient, doctor, and appointment management.',
+    details: 'Developing backend services, REST APIs, authentication, and database architecture for a clinic management platform.',
   },
   {
     id: 'craveguard',
@@ -155,7 +165,7 @@ export const FREELANCE_CLIENTS: FreelanceClient[] = [
     icon: 'cake',
     iconColor: '#f59e0b',
     bgColor: 'rgba(245, 158, 11, 0.12)',
-    details: 'Designed smoking-habit survey flows, craving support modules, habit tracking, money-saved visualizations, and location-based risk zone monitoring with Firebase real-time sync.',
+    details: 'Developing a mobile application focused on smoking cessation with tracking, location-based insights, and AI-powered support.',
   },
 ];
 

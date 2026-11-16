@@ -19,6 +19,7 @@ import {
   Truck,
   Zap,
   Cake,
+  Cpu,
   CheckCircle2,
   ArrowDown,
   CircleDot,
@@ -543,7 +544,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
             </div>
 
             <div className="inline-flex items-center self-start md:self-auto px-6 py-3 bg-white text-slate-900 font-black uppercase tracking-widest shadow-[4px_4px_0px_0px_rgba(236,72,153,1)] text-sm -rotate-2">
-              1 Professional Role
+              4 Projects & Roles
             </div>
           </div>
 
@@ -556,6 +557,9 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                 }
                 if (client.icon === 'zap') {
                   return <Zap className="w-8 h-8 text-white" />;
+                }
+                if (client.icon === 'cpu') {
+                  return <Cpu className="w-8 h-8 text-white" />;
                 }
                 return <Cake className="w-8 h-8 text-white" />;
               };

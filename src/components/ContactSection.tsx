@@ -7,7 +7,6 @@ import {
   MapPin,
   Github,
   Linkedin,
-  Instagram,
   Copy,
   Check,
   ExternalLink,
@@ -27,7 +26,7 @@ export const ContactSection: React.FC = () => {
   useGSAP(() => {
     // Animate contact info cards
     if (infoRef.current) {
-      gsap.fromTo(infoRef.current.children, 
+      gsap.fromTo(infoRef.current.children,
         { y: 30, opacity: 0 },
         {
           scrollTrigger: {
@@ -200,15 +199,6 @@ export const ContactSection: React.FC = () => {
                 >
                   <Linkedin className="w-4 h-4 text-cyan-600" />
                   <span>LinkedIn</span>
-                </a>
-                <a
-                  href={DEVELOPER_PROFILE.social.instagram}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="px-5 py-3 bg-pink-100 border-2 border-slate-900 text-xs font-black uppercase tracking-widest text-slate-900 inline-flex items-center gap-2 transition-all hover:translate-x-1 hover:-translate-y-1 shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]"
-                >
-                  <Instagram className="w-4 h-4 text-pink-600" />
-                  <span>Instagram</span>
                 </a>
               </div>
             </div>

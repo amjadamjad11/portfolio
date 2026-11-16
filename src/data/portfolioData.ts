@@ -41,7 +41,7 @@ export interface SkillGroup {
 
 export const DEVELOPER_PROFILE = {
   name: 'Mohammed Amjad K',
-  shortName: 'Mohammed Amjad',
+  shortName: 'Mohammed Amjad K',
   role: 'Full Stack Developer & Data Scientist',
   specialty: 'Node.js, Flutter & Data Science Specialist',
   location: 'Bengaluru, Karnataka, India',
@@ -52,7 +52,7 @@ export const DEVELOPER_PROFILE = {
   portfolioGithubUrl: 'https://github.com/amjadamjad11',
   social: {
     github: 'https://github.com/amjadamjad11',
-    linkedin: 'https://linkedin.com/in/amjadkondeth',
+    linkedin: 'https://www.linkedin.com/in/mohammed-amjad-k/',
     instagram: 'https://instagram.com/amjadkondeth',
   },
   bio: 'Computer Science graduate with six months of professional experience building a CCTV-based attendance system at Zoople Technologies. Skilled in backend development, REST APIs, database-driven systems, and Flutter mobile apps using Node.js, Express.js, MongoDB, SQL, and Dart.',

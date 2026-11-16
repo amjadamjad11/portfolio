@@ -65,21 +65,21 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
       ref={navRef}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/60 backdrop-blur-xl border-b border-white/80 shadow-[0_8px_32px_0_rgba(31,38,135,0.05)] py-3.5'
+          ? 'bg-black/70 backdrop-blur-xl border-b border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.5)] py-3.5'
           : 'bg-transparent border-b border-transparent py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Zone 1: Single text element wordmark with clean avatar */}
+          {/* Zone 1: Logo */}
           <a
             href="#home"
             className="flex items-center gap-3 group transition-opacity hover:opacity-95"
           >
-            <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-pink-500 via-fuchsia-500 to-cyan-500 flex items-center justify-center text-white font-bold text-lg shadow-[0_0_15px_rgba(236,72,153,0.5)] ring-2 ring-white group-hover:scale-110 transition-transform duration-300">
+            <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-blue-500 via-cyan-500 to-slate-300 flex items-center justify-center text-white font-bold text-lg shadow-[0_0_15px_rgba(96,165,250,0.5)] ring-2 ring-white/20 group-hover:scale-110 transition-transform duration-300">
               {DEVELOPER_PROFILE.shortName.charAt(0)}
             </div>
-            <span className="text-xl sm:text-2xl font-black tracking-tighter text-slate-900 group-hover:text-neon-pink transition-colors duration-300">
+            <span className="text-xl sm:text-2xl font-black tracking-tighter text-white group-hover:text-blue-400 transition-colors duration-300">
               {DEVELOPER_PROFILE.shortName.toUpperCase()}
             </span>
           </a>
@@ -94,13 +94,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
                   href={link.href}
                   className={`text-sm uppercase tracking-widest font-bold transition-all duration-300 relative py-2 ${
                     isActive
-                      ? 'text-neon-pink'
-                      : 'text-slate-500 hover:text-slate-900'
+                      ? 'text-blue-400'
+                      : 'text-slate-400 hover:text-white'
                   }`}
                 >
                   {link.name}
                   {isActive && (
-                    <span className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-full shadow-[0_0_10px_rgba(236,72,153,0.8)]" />
+                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full shadow-[0_0_10px_rgba(96,165,250,0.8)]" />
                   )}
                 </a>
               );
@@ -111,18 +111,18 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
           <div className="hidden sm:flex items-center gap-3">
             <button
               onClick={onContactClick}
-              className="group inline-flex items-center gap-2 px-6 py-2.5 text-xs uppercase tracking-wider font-bold text-white bg-slate-900 hover:bg-slate-800 rounded-none border border-slate-900 hover:border-neon-pink hover:shadow-[5px_5px_0px_0px_rgba(236,72,153,1)] transition-all duration-300 active:translate-y-1 active:shadow-[0px_0px_0px_0px_rgba(236,72,153,1)]"
+              className="group inline-flex items-center gap-2 px-6 py-2.5 text-xs uppercase tracking-wider font-bold text-white bg-blue-600/80 hover:bg-blue-500 rounded-none border border-blue-400/50 hover:border-blue-300 hover:shadow-[0_0_20px_rgba(96,165,250,0.5)] transition-all duration-300 active:translate-y-1 backdrop-blur-sm"
             >
               <span>Get In Touch</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
           </div>
 
-          {/* Mobile menu hamburger */}
+          {/* Mobile hamburger */}
           <div className="flex md:hidden items-center gap-2">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-800 hover:text-neon-pink rounded-lg hover:bg-slate-100 transition-colors"
+              className="p-2 text-slate-300 hover:text-blue-400 rounded-lg hover:bg-white/10 transition-colors"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
@@ -133,7 +133,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-b border-white/50 bg-white/95 backdrop-blur-xl px-4 pt-3 pb-6 space-y-4 shadow-2xl">
+        <div className="md:hidden border-b border-white/10 bg-black/90 backdrop-blur-xl px-4 pt-3 pb-6 space-y-4 shadow-2xl">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -141,8 +141,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
               onClick={() => setMobileMenuOpen(false)}
               className={`block px-4 py-3 text-lg uppercase tracking-widest font-black transition-colors ${
                 activeSection === link.href.substring(1)
-                  ? 'bg-pink-50 text-neon-pink border-l-4 border-pink-500'
-                  : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                  ? 'bg-blue-500/10 text-blue-400 border-l-4 border-blue-400'
+                  : 'text-slate-400 hover:bg-white/5 hover:text-white'
               }`}
             >
               {link.name}
@@ -154,7 +154,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onContactClick }) => {
                 setMobileMenuOpen(false);
                 onContactClick();
               }}
-              className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-bold uppercase tracking-widest text-white bg-slate-900 shadow-[4px_4px_0px_0px_rgba(236,72,153,1)]"
+              className="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-bold uppercase tracking-widest text-white bg-blue-600 shadow-[0_0_20px_rgba(96,165,250,0.4)]"
             >
               <span>Get In Touch</span>
               <ArrowRight className="w-5 h-5" />

@@ -1,23 +1,49 @@
 @import "tailwindcss";
 
+/* ─── Global Background ─────────────────────────────────────── */
+html, body {
+  min-height: 100%;
+  background-color: #050505;
+  color: #e2e8f0;
+  color-scheme: dark;
+}
+
+body {
+  background-image: url('/background.jpeg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Overlay so sections don't fight the background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  z-index: 0;
+  pointer-events: none;
+}
+
+#__next, main, [data-nextjs-scroll-focus-boundary] {
+  position: relative;
+  z-index: 1;
+}
+
 @layer base {
   * {
-    border-color: rgba(0, 0, 0, 0.08);
+    border-color: rgba(255, 255, 255, 0.08);
   }
-  
   html {
     scroll-behavior: smooth;
-    color-scheme: light;
+    color-scheme: dark;
   }
 }
 
 @keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
 }
 
 .animate-marquee {
@@ -25,57 +51,65 @@
   width: max-content;
   animation: marquee 28s linear infinite;
 }
-
 .animate-marquee:hover {
   animation-play-state: paused;
 }
 
-/* Glassmorphism and glow styles for Light Mode */
+/* ─── Dark Glass Cards ───────────────────────────────────────── */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(10, 10, 15, 0.70);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(12, 12, 18, 0.75);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.6);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .glass-card:hover {
-  border-color: rgba(236, 72, 153, 0.5); /* Neon pink border */
-  box-shadow: 0 10px 40px -10px rgba(236, 72, 153, 0.3); /* Neon glow */
+  border-color: rgba(96, 165, 250, 0.5);
+  box-shadow: 0 10px 40px -10px rgba(96, 165, 250, 0.25);
   transform: translateY(-4px) scale(1.02);
 }
 
-/* Neon text utilities */
-.text-neon-pink {
-  color: #ec4899;
-  text-shadow: 0 0 10px rgba(236, 72, 153, 0.5), 0 0 20px rgba(236, 72, 153, 0.3);
-}
-
+/* ─── Neon Text ──────────────────────────────────────────────── */
 .text-neon-blue {
-  color: #3b82f6;
-  text-shadow: 0 0 10px rgba(59, 130, 246, 0.5), 0 0 20px rgba(59, 130, 246, 0.3);
+  color: #60a5fa;
+  text-shadow: 0 0 10px rgba(96, 165, 250, 0.6), 0 0 20px rgba(96, 165, 250, 0.3);
 }
 
-/* Custom scrollbars */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+.text-neon-cyan {
+  color: #22d3ee;
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.6), 0 0 20px rgba(34, 211, 238, 0.3);
 }
-::-webkit-scrollbar-track {
-  background: #f8fafc;
+
+.text-neon-silver {
+  color: #e2e8f0;
+  text-shadow: 0 0 8px rgba(226, 232, 240, 0.4);
 }
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 5px;
+
+/* ─── Custom Scrollbar (dark) ───────────────────────────────── */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #0a0a0f; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #60a5fa; }
+
+/* ─── Section backgrounds (override light Tailwind classes) ──── */
+.section-dark {
+  background: rgba(5, 5, 10, 0.80);
+  backdrop-filter: blur(10px);
 }
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+
+/* ─── Button glow utility ───────────────────────────────────── */
+.btn-glow-blue {
+  box-shadow: 0 0 16px rgba(96, 165, 250, 0.5), 0 0 32px rgba(96, 165, 250, 0.2);
+}
+.btn-glow-cyan {
+  box-shadow: 0 0 16px rgba(34, 211, 238, 0.5), 0 0 32px rgba(34, 211, 238, 0.2);
 }

@@ -158,7 +158,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
   }, { scope: sectionRef });
 
   return (
-    <section ref={sectionRef} id="about" className="py-20 md:py-32 relative bg-[#f1f0ea] overflow-hidden">
+    <section ref={sectionRef} id="about" className="py-20 md:py-32 relative bg-black/40 backdrop-blur-sm overflow-hidden">
       {/* Abstract Background pattern - matching the light warm gray of the reference */}
       <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#1e293b 2px, transparent 2px)', backgroundSize: '30px 30px' }} />
 
@@ -612,3 +612,4 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
     </section>
   );
 };
+

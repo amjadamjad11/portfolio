@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
   const marqueeText = "OPEN TO FULL STACK ROLES • LET'S BUILD SOMETHING GREAT • AVAILABLE FOR HIRE • ";
 
   return (
-    <footer className="bg-slate-900 border-t-8 border-slate-900 relative overflow-hidden">
+    <footer className="bg-black/80 backdrop-blur-md border-t border-white/10 relative overflow-hidden">
       {/* Marquee Banner */}
       <div className="w-full bg-pink-500 border-b-8 border-slate-900 py-3 sm:py-4 overflow-hidden relative shadow-[0_8px_0px_0px_rgba(15,23,42,1)] z-10 -rotate-1 origin-left mt-4 mb-8">
         <div ref={marqueeRef} className="flex whitespace-nowrap w-[200%]">
@@ -108,3 +108,4 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
+

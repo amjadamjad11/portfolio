@@ -69,11 +69,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   };
 
   return (
-    <section ref={sectionRef} id="home" className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-slate-50">
+    <section ref={sectionRef} id="home" className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden bg-transparent">
       {/* Background ambient lighting glows - Light Mode Neons */}
-      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-pink-300/40 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute top-1/3 right-1/4 translate-x-1/2 w-[35rem] h-[35rem] bg-cyan-300/40 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-10 left-1/3 w-[30rem] h-[30rem] bg-fuchsia-300/40 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-blue-500/15 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-1/3 right-1/4 translate-x-1/2 w-[35rem] h-[35rem] bg-cyan-500/10 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-10 left-1/3 w-[30rem] h-[30rem] bg-slate-400/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -92,27 +92,27 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
 
             <div className="space-y-4">
-              <h1 className="text-5xl sm:text-7xl md:text-8xl font-black tracking-tighter leading-[0.95] text-slate-900 uppercase">
+              <h1 className="text-5xl sm:text-7xl md:text-8xl font-black tracking-tighter leading-[0.95] text-white uppercase">
                 Hi, I’m <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-fuchsia-600 to-cyan-500 drop-shadow-sm">
                   Mohammed Amjad
                 </span>{' '}
                 <br />
-                <span className="text-slate-900 text-[1.2em] leading-none block mt-2">
+                <span className="text-blue-400 text-[1.2em] leading-none block mt-2">
                   K
                 </span>
               </h1>
             </div>
 
-            <div className="flex flex-wrap items-center gap-3 text-xl sm:text-2xl font-black uppercase tracking-widest text-slate-900">
-              <span className="bg-pink-100 px-2 text-neon-pink">Full Stack Developer</span>
+            <div className="flex flex-wrap items-center gap-3 text-xl sm:text-2xl font-black uppercase tracking-widest text-white">
+              <span className="bg-pink-500/20 px-2 text-pink-400">Full Stack Developer</span>
               <span className="text-cyan-500">❖</span>
-              <span className="bg-amber-100 px-2 text-amber-600">Data Scientist</span>
+              <span className="bg-amber-500/20 px-2 text-amber-400">Data Scientist</span>
               <span className="text-cyan-500">❖</span>
-              <span className="bg-cyan-100 px-2 text-blue-500">Node.js & Flutter Specialist</span>
+              <span className="bg-cyan-500/20 px-2 text-cyan-400">Node.js & Flutter Specialist</span>
             </div>
 
-            <p className="text-slate-700 text-lg sm:text-xl leading-relaxed max-w-2xl font-medium border-l-4 border-slate-900 pl-4 bg-white/50 py-2">
+            <p className="text-slate-300 text-lg sm:text-xl leading-relaxed max-w-2xl font-medium border-l-4 border-blue-400/60 pl-4 bg-white/5 py-2">
               {DEVELOPER_PROFILE.bio}
             </p>
 
@@ -283,7 +283,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       </div>
 
       {/* Marquee Continuous Ribbon */}
-      <div ref={marqueeRef} className="mt-24 border-y-4 border-slate-900 bg-pink-300 py-4 overflow-hidden shadow-[0_10px_0_0_rgba(236,72,153,0.3)]">
+      <div ref={marqueeRef} className="mt-24 border-y border-white/10 bg-white/5 backdrop-blur-sm py-4 overflow-hidden shadow-[0_10px_0_0_rgba(236,72,153,0.3)]">
         <div className="animate-marquee whitespace-nowrap flex items-center gap-10">
           {[...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS].map((tech, idx) => (
             <div
@@ -299,3 +299,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
     </section>
   );
 };
+
+
+
+

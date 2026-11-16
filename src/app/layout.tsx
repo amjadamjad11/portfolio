@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={spaceGrotesk.className}>
-      <body className="min-h-screen bg-slate-50 text-slate-900 antialiased selection:bg-pink-500/30 selection:text-pink-900">
+      <body className="min-h-screen text-slate-100 antialiased selection:bg-blue-500/30 selection:text-blue-100">
         {children}
       </body>
     </html>

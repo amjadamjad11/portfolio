@@ -34,13 +34,12 @@ export default function HomePage() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 relative selection:bg-pink-500/30 selection:text-pink-900">
-      {/* Background grid pattern */}
-      <div 
-        className="fixed inset-0 pointer-events-none opacity-[0.05]"
+    <div className="min-h-screen text-slate-100 relative selection:bg-blue-500/30 selection:text-blue-100">
+      {/* Subtle vignette overlay */}
+      <div
+        className="fixed inset-0 pointer-events-none"
         style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(0,0,0,0.9) 1px, transparent 0)`,
-          backgroundSize: '40px 40px'
+          background: 'radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.6) 100%)'
         }}
       />
 

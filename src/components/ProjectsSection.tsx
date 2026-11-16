@@ -149,7 +149,7 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
   ];
 
   return (
-    <section ref={sectionRef} id="projects" className="py-20 md:py-32 relative bg-pink-50">
+    <section ref={sectionRef} id="projects" className="py-20 md:py-32 relative bg-black/40 backdrop-blur-sm">
       {/* Background graphic */}
       <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-cyan-300/30 rounded-full blur-[100px] pointer-events-none" />
 
@@ -328,3 +328,4 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({
     </section>
   );
 };
+

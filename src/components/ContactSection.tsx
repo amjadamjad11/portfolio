@@ -51,7 +51,7 @@ export const ContactSection: React.FC = () => {
   };
 
   return (
-    <section ref={sectionRef} id="contact" className="py-20 md:py-32 relative bg-white border-t-8 border-slate-900 overflow-hidden">
+    <section ref={sectionRef} id="contact" className="py-20 md:py-32 relative bg-black/40 backdrop-blur-sm border-t border-white/10 overflow-hidden">
       {/* Background Graphic */}
       <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(45deg, #000 0, #000 2px, transparent 2px, transparent 10px)' }} />
 
@@ -255,3 +255,4 @@ export const ContactSection: React.FC = () => {
     </section>
   );
 };
+

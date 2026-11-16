@@ -78,7 +78,7 @@ export const SkillsSection: React.FC = () => {
   };
 
   return (
-    <section ref={sectionRef} id="skills" className="py-20 md:py-32 relative bg-white border-y-8 border-slate-900 overflow-hidden">
+    <section ref={sectionRef} id="skills" className="py-20 md:py-32 relative bg-black/40 backdrop-blur-sm border-y border-white/10 overflow-hidden">
       {/* Background elements */}
       <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_100%_100%,_rgba(236,72,153,0.1),_transparent_40%)] pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-full h-full bg-[radial-gradient(circle_at_0%_0%,_rgba(6,182,212,0.1),_transparent_40%)] pointer-events-none" />
@@ -151,3 +151,4 @@ export const SkillsSection: React.FC = () => {
     </section>
   );
 };
+

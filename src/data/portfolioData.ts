@@ -69,12 +69,12 @@ export const DEVELOPER_PROFILE = {
     communityLeadership: 'CGPA: 7.86/10 — Active participant in college tech events and CSE department activities.',
   },
   researchPublication: {
-    title: 'CCTV-Based Smart Attendance System for Employee Monitoring',
-    description: 'Developed an automated attendance recording system using camera monitoring to eliminate manual employee check-in at Zoople Technologies, Calicut.',
-    journal: 'Professional Experience at Zoople Technologies',
-    issn: 'Duration: 6 Months (2026)',
-    scope: 'Computer Vision & Data Processing',
-    link: '#publication-modal',
+    title: 'NeuroLex – Dyslexia Support System',
+    description: 'Developed an interactive web-based dyslexia support platform featuring a 45-question adaptive assessment to evaluate key cognitive and language-related domains, identify potential dyslexia risk, and provide personalized learning insights.',
+    journal: 'IEEE Publication',
+    issn: 'See Official IEEE Publication',
+    scope: 'Artificial Intelligence, Dyslexia Assessment & Educational Technology',
+    link: 'https://ieeexplore.ieee.org/document/11712595',
   },
   certificates: [
     { name: 'Full Stack Development (Node.js, Express, MongoDB)', provider: 'Self-Directed Learning' },
@@ -84,16 +84,20 @@ export const DEVELOPER_PROFILE = {
   ],
   careerGoals: [
     {
+      title: 'Data Scientist / AI-ML Engineer',
+      desc: 'Building intelligent solutions using machine learning, deep learning, data analysis, and AI to solve real-world problems.',
+    },
+    {
       title: 'Full Stack Developer Role',
       desc: 'Securing a role at a product company to build scalable web and mobile applications.',
     },
     {
       title: 'Backend Engineering',
-      desc: 'Deepening expertise in Node.js microservices, API architecture, and cloud deployment.',
+      desc: 'Deepening expertise in Node.js, RESTful APIs, database architecture, and cloud deployment.',
     },
     {
       title: 'Mobile Development',
-      desc: 'Expanding Flutter skills to ship production-grade cross-platform apps for real users.',
+      desc: 'Expanding Flutter skills to develop production-ready cross-platform applications.',
     },
   ],
   languages: ['English', 'Malayalam', 'Hindi'],

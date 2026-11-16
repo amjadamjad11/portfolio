@@ -380,7 +380,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                   </div>
 
                   <div className="pt-6 mt-4 border-t-2 border-slate-200">
-                    <a href="https://github.com/amjadamjad11" target="_blank" rel="noopener noreferrer" className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-cyan-400 border-2 border-slate-900 text-slate-900 text-sm font-black uppercase tracking-widest shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
+                    <a href="https://ieeexplore.ieee.org/document/11712595" target="_blank" rel="noopener noreferrer" className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-cyan-400 border-2 border-slate-900 text-slate-900 text-sm font-black uppercase tracking-widest shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] hover:shadow-none hover:translate-x-1 hover:translate-y-1 transition-all">
                       <BookOpen className="w-4 h-4" />
                       <span>View Experience Details</span>
                       <ExternalLink className="w-4 h-4 ml-1" />
